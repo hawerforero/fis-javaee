@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+<h:head></h:head>
+<h:body>
+	<b:container>
+		<b:panel>
+			<b:row>
+				<b:column>
+					<h1>Cuadro registrado con exito!</h1>
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Titulo:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.titulo}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Fecha de compra:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.fechaCreacion}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Dimensiones:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.alto}" /> x
+					<h:outputText value="#{comprarCuadroManagedBean.ancho}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Clasificación:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.clasificacion}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Técnica:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.tecnica}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Tema:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.tema}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Nombre artista:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.nombreArtista}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Apellido artista:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.apellidoArtista}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Nombre vendedor:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.nombreVendedor}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Dirección vendedor:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.direccionVendedor}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Fecha compra:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.fechaCompra}" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<strong>Precio:</strong>
+				</b:column>
+				<b:column medium-screen="4">
+					<h:outputText value="#{comprarCuadroManagedBean.valor}" />
+				</b:column>
+			</b:row>
+		</b:panel>
+	</b:container>
+</h:body>
+</html>

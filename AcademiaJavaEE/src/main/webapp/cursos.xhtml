@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+<ui:composition template="layout.xhtml">
+	<ui:define name="contenido">
+		<b:container fluid="true">
+			<b:panel title="Lista de cursos" look="primary">
+				<h:form>
+					<b:row>
+						<b:dataTable value="#{insCursoManaged.cursos}" var="curso">
+							<b:dataTableColumn value="#{curso.idcurso}" />
+							<b:dataTableColumn value="#{curso.descripcion}" />
+							<b:dataTableColumn value="#{curso.precio}" />
+						</b:dataTable>
+					</b:row>
+					<b:row>
+						<b:commandButton value="Agregar curso" action="insCurso"
+							look="primary" />
+					</b:row>
+				</h:form>
+			</b:panel>
+		</b:container>
+	</ui:define>
+</ui:composition>
+
+</html>

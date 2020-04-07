@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+
+<ui:composition template="plantilla.xhtml">
+	<ui:define name="formulario">
+
+		<h:form id="loginForm">
+			<b:container layout="fluid">
+				<b:panel title="Comprar cuadro" look="primary">
+					<b:panel title="Información del cuadro">
+						<b:row>
+							<b:column medium-screen="2">
+								<h:outputText value="Título:" for="titulo" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:inputText placeholder="Título de la obra" id="titulo"
+									value="#{comprarCuadroManagedBean.titulo}"></b:inputText>
+							</b:column>
+							<b:column medium-screen="2">
+								<h:outputText value="Clasificaión:" for="clasificacion" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:selectOneMenu id="clasificacion"
+									value="#{comprarCuadroManagedBean.clasificacion}">
+									<f:selectItem itemLabel="Seleccione una" itemValue="" />
+									<f:selectItem itemLabel="Obra maestra" itemValue="Obra maestra" />
+									<f:selectItem itemLabel="Obra representativa"
+										itemValue="Obra representativa" />
+									<f:selectItem itemLabel="Otro tipo" itemValue="Otro tipo" />
+								</b:selectOneMenu>
+							</b:column>
+						</b:row>
+						<b:row>
+							<b:column medium-screen="2">
+								<h:outputText value="Fecha:" for="fecha" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:dateTimePicker placeholder="Fecha de creación"
+									render-label="true" show-time="false" id="fecha"
+									value="#{comprarCuadroManagedBean.fechaCreacion}" />
+							</b:column>
+							<b:column medium-screen="2">
+								<h:outputText value="Técnica:" for="tecnica" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:selectOneMenu id="tecnica"
+									value="#{comprarCuadroManagedBean.tecnica}">
+									<f:selectItem itemLabel="Seleccione una" itemValue="" />
+									<f:selectItem itemLabel="Óleo" itemValue="Óleo" />
+									<f:selectItem itemLabel="Acuarela" itemValue="Acuarela" />
+									<f:selectItem itemLabel="Otra técnica" itemValue="Otra técnica" />
+								</b:selectOneMenu>
+							</b:column>
+						</b:row>
+						<b:row>
+							<b:column medium-screen="2">
+								<h:outputText value="Dimensiones" />
+							</b:column>
+							<b:column medium-screen="1">
+								<h:outputText value="Altura (cm):" for="alto" />
+							</b:column>
+							<b:column medium-screen="1">
+								<b:inputText type="number" id="alto"
+									value="#{comprarCuadroManagedBean.alto}"></b:inputText>
+							</b:column>
+							<b:column medium-screen="1">
+								<h:outputText value="Anchura (cm):" for="ancho" />
+							</b:column>
+							<b:column medium-screen="1">
+								<b:inputText type="number" id="ancho"
+									value="#{comprarCuadroManagedBean.ancho}"></b:inputText>
+							</b:column>
+							<b:column medium-screen="2">
+								<h:outputText value="Tema:" for="tema" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:selectOneMenu id="tema"
+									value="#{comprarCuadroManagedBean.tema}">
+									<f:selectItem itemLabel="Seleccione una" itemValue="" />
+									<f:selectItem itemLabel="Retrato" itemValue="Retrato" />
+									<f:selectItem itemLabel="Naturaleza muerta"
+										itemValue="Naturaleza muerta" />
+									<f:selectItem itemLabel="Paisaje" itemValue="Paisaje" />
+									<f:selectItem itemLabel="Otro tema" itemValue="Otro tema" />
+								</b:selectOneMenu>
+							</b:column>
+						</b:row>
+					</b:panel>
+					<b:panel title="Información del artista">
+						<b:row>
+							<b:column medium-screen="2">
+								<h:outputText value="Nombre:" for="nombre" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:inputText placeholder="Nombre del artista" id="nombre"
+									value="#{comprarCuadroManagedBean.nombreArtista}"></b:inputText>
+							</b:column>
+							<b:column medium-screen="2">
+								<h:outputText value="Apellido:" for="apellido" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:inputText placeholder="Apellido del artsiata" id="apellido"
+									value="#{comprarCuadroManagedBean.apellidoArtista}"></b:inputText>
+							</b:column>
+						</b:row>
+					</b:panel>
+					<b:panel title="Información del vendedor">
+						<b:row>
+							<b:column medium-screen="2">
+								<h:outputText value="Nombre:" for="vendedor" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:inputText placeholder="Nombre del vendedor" id="vendedor"
+									value="#{comprarCuadroManagedBean.nombreVendedor}"></b:inputText>
+							</b:column>
+							<b:column medium-screen="2">
+								<h:outputText value="Dirección" for="direccion" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:inputText placeholder="Dirección vendedor" id="direccion"
+									value="#{comprarCuadroManagedBean.direccionVendedor}"></b:inputText>
+							</b:column>
+						</b:row>
+						<b:row>
+							<b:column medium-screen="2">
+								<h:outputText value="Fecha de compra:" for="fechaCompra" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:dateTimePicker placeholder="Fecha de compra"
+									render-label="true" show-time="false" id="fechaCompra"
+									value="#{comprarCuadroManagedBean.fechaCompra}" />
+							</b:column>
+							<b:column medium-screen="2">
+								<h:outputText value="Precio (max):" for="precioMax" />
+							</b:column>
+							<b:column medium-screen="2">
+								<b:inputText type="number" id="precioMax" value=""
+									disabled="true"></b:inputText>
+							</b:column>
+							<b:column medium-screen="2">
+								<b:button look="info" value="Calcular" />
+							</b:column>
+						</b:row>
+						<b:row>
+							<b:column medium-screen="2">
+								<h:outputText value="Precio compra:" for="valor" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:inputText type="number" id="valor"
+									value="#{comprarCuadroManagedBean.valor}"></b:inputText>
+							</b:column>
+							<b:column medium-screen="2">
+								<h:outputText value="Precio venta (sugerido):" for="precioVenta" />
+							</b:column>
+							<b:column medium-screen="4">
+								<b:inputText type="number" id="precioVenta" value=""
+									disabled="true"></b:inputText>
+							</b:column>
+						</b:row>
+					</b:panel>
+					<b:row>
+						<b:column span="2" offset="10">
+							<b:commandButton value="Registrar" look="primary"
+								style="width:100%"
+								action="#{comprarCuadroManagedBean.registrarCuadro()}" />
+						</b:column>
+					</b:row>
+				</b:panel>
+			</b:container>
+		</h:form>
+		
+		
+	</ui:define>
+</ui:composition>
+</html>

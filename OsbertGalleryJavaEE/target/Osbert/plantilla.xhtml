@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+<h:head></h:head>
+<h:body>
+	<header> 
+	<b:row class="well">
+		<b:column>
+			<h1>Osbert</h1>
+		</b:column>
+	</b:row> 
+	<b:row>
+		<b:column>
+			<nav>
+			<ul>
+				<li><h:link outcome="comprarCuadro" value="Comprar"/></li>
+					<li><h:link outcome="componente1" value="Vender"/></li>
+			</ul>
+			</nav>
+		</b:column>
+	</b:row> 
+	</header>
+	<section> 
+	<ui:insert name="formulario"></ui:insert> 
+	</section>
+	<footer>
+	 <b:row class="well">
+		<b:column>
+			<h3>by @hawer_for</h3>
+		</b:column>
+	</b:row> 
+	</footer>
+</h:body>
+</html>

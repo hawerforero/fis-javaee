@@ -1,0 +1,9 @@
+entidades\Inscripcion_.class
+dao\FormaPagoDAO.class
+dao\InscripcionDAO.class
+entidades\Inscripcion.class
+entidades\Curso_.class
+dao\CursoDAO.class
+entidades\Curso.class
+entidades\Formapago_.class
+entidades\Formapago.class

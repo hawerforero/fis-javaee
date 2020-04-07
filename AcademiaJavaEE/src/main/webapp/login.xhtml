@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<b:container fluid="true">
+			<b:panel title="login screen" look="primary">
+				<b:row>
+					<b:row>
+						<b:column medium-screen="2">
+							<h:outputText value="Username:" />
+						</b:column>
+						<b:column medium-screen="4">
+							<b:inputText placeholder="Username" value="#{loginManaged.user}" />
+						</b:column>
+					</b:row>
+					<b:row>
+						<b:column medium-screen="2">
+							<h:outputText value="Password:" />
+						</b:column>
+						<b:column medium-screen="4">
+							<b:inputSecret placeholder="Password"  value="#{loginManaged.password}"/>
+						     
+						</b:column>
+					</b:row>
+					<b:row>
+						<b:column span="2" offset="2">
+							<b:commandButton value="login"  action="#{loginManaged.validarLogin}" look="primary" style="width:100%" />
+						</b:column>
+						<b:column span="2">
+							<b:commandButton value="password forgotten" look="danger"
+								style="width:100%" />
+						</b:column>
+					</b:row>
+				</b:row>
+			</b:panel>
+		</b:container>
+	</h:form>
+</body>
+</html>
